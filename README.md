@@ -4,7 +4,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## Development server
 1. Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-2. Run `npm run server` for running websocket server.
+2. Run in separate terminal tab `npm run server` for running websocket server.
 
 ## Code scaffolding
 
