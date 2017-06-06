@@ -1,0 +1,7 @@
+<div class="list">
+  <ul>
+    <li *ngFor="let user of users" (click)="selectUser(user.user)">
+      <img src="{{user.avatar}}" class="avatar" />{{user.user}}
+   	</li>
+  </ul>
+</div>
