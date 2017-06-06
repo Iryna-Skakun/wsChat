@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { PluginTemplateComponent } from '../plugin-template/plugin-template.component'
 
 @Component({
-  selector: 'plugin-test',
-  templateUrl: './plugin-test.component.html',
-  styleUrls: ['./plugin-test.component.css']
+  selector: 'plugin-interceptor',
+  templateUrl: 'plugin-interceptor.component.html',
+  styleUrls: ['plugin-interceptor.component.css']
 })
-export class PluginTestComponent extends PluginTemplateComponent {
+export class PluginInterceptorComponent extends PluginTemplateComponent {
 
   constructor() {
     super()

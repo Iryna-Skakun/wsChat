@@ -14,7 +14,7 @@ import { LoginViewComponent } from './login-view/login-view.component';
 
 import { ConnectedGuard } from './connected.guard';
 import { MessageInterceptorComponent } from './message-interceptor/message-interceptor.component';
-import { PluginTestComponent } from './plugin-test/plugin-test.component';
+import { PluginInterceptorComponent } from './plugin-interceptor/plugin-interceptor.component';
 import { MessageViewComponent } from './message-view/message-view.component';
 
 
@@ -26,7 +26,7 @@ import { MessageViewComponent } from './message-view/message-view.component';
     ChatViewComponent,
     LoginViewComponent,
     MessageInterceptorComponent,
-    PluginTestComponent,
+    PluginInterceptorComponent,
     MessageViewComponent
 
   ],
