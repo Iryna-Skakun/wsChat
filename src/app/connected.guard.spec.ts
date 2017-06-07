@@ -1,15 +1,15 @@
-import { TestBed, async, inject } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { ConnectedGuard } from './connected.guard';
 
 describe('ConnectedGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ConnectedGuard]
+      providers: [ConnectedGuard],
     });
   });
 
-  it('should ...', inject([ConnectedGuard], (guard: ConnectedGuard) => {
-    expect(guard).toBeTruthy();
-  }));
+  it('ConnectedGuard', () => {
+    expect(ConnectedGuard).toBeTruthy();
+  });
 });
+

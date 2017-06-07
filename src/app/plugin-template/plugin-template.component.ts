@@ -2,7 +2,14 @@ import { Component, OnInit, HostBinding, Input, Output, EventEmitter } from '@an
 
 import { Message } from '../message'
 
-export abstract class PluginTemplateComponent implements OnInit {
+@Component({
+  selector: 'plugin-template',
+  templateUrl: 'plugin-template.component.html',
+  styleUrls: ['plugin-template.component.css']
+})
+
+export class PluginTemplateComponent implements OnInit {
+  constructor() {}
 
   @HostBinding('hidden')
   private isHidden: boolean = true;
@@ -13,9 +20,6 @@ export abstract class PluginTemplateComponent implements OnInit {
   @Output()
   private interceptor: EventEmitter<void> = new EventEmitter<void>()
 
-  @Output()
-  private discard: EventEmitter<void> = new EventEmitter<void>()
-
   ngOnInit() {
     let text = this.message.text;
     if (text.startsWith("/")) {
@@ -25,7 +29,7 @@ export abstract class PluginTemplateComponent implements OnInit {
         command = text.slice(1)
         value = ""
       }
-      this.process(command, value, this.message.author)
+      this.intercept()
     }
   }
 
@@ -33,11 +37,4 @@ export abstract class PluginTemplateComponent implements OnInit {
     this.isHidden = false
     this.interceptor.emit()
   }
-
-  discardMessage() {
-    this.discard.emit()
-  }
-
-  abstract process(command: string, value: string, author: string): void
-  
 }
