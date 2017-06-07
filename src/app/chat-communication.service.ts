@@ -65,13 +65,11 @@ export class ChatCommunicationService {
   }
 
   private send(message: Message) {
-    //this.ws.send(JSON.stringify(message))
     this.ws.send(message.text.toString())
   }
 
   private onMessage(event: any) {
     let object: any = JSON.parse(event.data)
-    //  let object: any = event.data
     let m:Message = object
     if(object.action == "LIST") {
       let list:Array<string> =JSON.parse(m.text)
